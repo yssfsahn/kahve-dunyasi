@@ -18,8 +18,12 @@ class YusufBox extends StatelessWidget {
           child: Column(
             //mainAxisSize: MainAxisSize.min, <= bu en minimal şekilde ekrara sığdırır
             //mainAxisAlignment: MainAxisAlignment.start: kutuları tepede tutturur, MainAxisAlignment.end ise kutuları alta tutturur.
-            mainAxisAlignment: MainAxisAlignment.end,
+            // mainAxisAlignment: MainAxisAlignment.center ise merkezde tutturur.
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween = ortalarını boş bırakır eşit şekilde ekranra yayar
+            // "verticalDirection: VerticalDirection.up ve .down" // en üs ile en altın yerini dğeiştirir. ayna etkisi yaratıyor.
 
+            verticalDirection: VerticalDirection.down,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 width: 200,
