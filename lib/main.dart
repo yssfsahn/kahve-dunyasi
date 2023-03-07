@@ -13,9 +13,13 @@ class YusufBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.lime,
+        backgroundColor: Colors.black54,
         body: SafeArea(
           child: Column(
+            //mainAxisSize: MainAxisSize.min, <= bu en minimal şekilde ekrara sığdırır
+            //mainAxisAlignment: MainAxisAlignment.start: kutuları tepede tutturur, MainAxisAlignment.end ise kutuları alta tutturur.
+            mainAxisAlignment: MainAxisAlignment.end,
+
             children: [
               Container(
                 width: 200,
@@ -36,20 +40,6 @@ class YusufBox extends StatelessWidget {
                 width: 200,
                 color: Colors.yellowAccent,
                 child: Text('Kutu 3'),
-                alignment: FractionalOffset.center,
-              ),
-              Container(
-                height: 150,
-                width: 200,
-                color: Colors.orange,
-                child: Text('Kutu 4'),
-                alignment: FractionalOffset.center,
-              ),
-              Container(
-                height: 150,
-                width: 200,
-                color: Colors.blue,
-                child: Text('Kutu 5'),
                 alignment: FractionalOffset.center,
               ),
             ],
