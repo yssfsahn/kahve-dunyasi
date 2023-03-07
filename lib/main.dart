@@ -13,17 +13,24 @@ class YusufBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.orange[600],
-        body: Center(
-          child: Text(
-            'Bottom',
-            style: TextStyle(fontSize: 60),
+        backgroundColor: Colors.lime,
+        body: SafeArea(
+          child: Container(
+            width: 150,
+            height: 150,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+                shape: BoxShape.rectangle,
+                color: Colors.red,
+                borderRadius: BorderRadiusDirectional.circular(10)),
+            padding: EdgeInsets.all(30),
+            margin: EdgeInsets.all(26),
+            child: Transform(
+              child: Text('God of Flutter'),
+              transform: Matrix4.rotationZ(-0.2),
+              alignment: FractionalOffset.center,
+            ),
           ),
-        ),
-        appBar: AppBar(
-          backgroundColor: Colors.pink[800],
-          title: Text('God of Flutter'),
-          centerTitle: true,
         ),
       ),
     );
