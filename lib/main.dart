@@ -15,21 +15,37 @@ class YusufBox extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.lime,
         body: SafeArea(
-          child: Container(
-            width: 150,
-            height: 150,
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
+          child: Column(
+            children: [
+              Container(
+                width: 200,
+                height: 150,
                 color: Colors.red,
-                borderRadius: BorderRadiusDirectional.circular(10)),
-            padding: EdgeInsets.all(30),
-            margin: EdgeInsets.all(26),
-            child: Transform(
-              child: Text('God of Flutter'),
-              transform: Matrix4.rotationZ(-0.2),
-              alignment: FractionalOffset.center,
-            ),
+                child: Text('Kutu 1'),
+                alignment: FractionalOffset.center,
+              ),
+              Container(
+                height: 150,
+                width: 200,
+                color: Colors.brown,
+                child: Text('Kutu 2'),
+                alignment: FractionalOffset.center,
+              ),
+              Container(
+                height: 150,
+                width: 200,
+                color: Colors.yellowAccent,
+                child: Text('Kutu 3'),
+                alignment: FractionalOffset.center,
+              ),
+              Container(
+                height: 150,
+                width: 200,
+                color: Colors.orange,
+                child: Text('Kutu 4'),
+                alignment: FractionalOffset.center,
+              ),
+            ],
           ),
         ),
       ),
