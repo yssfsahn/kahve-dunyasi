@@ -20,10 +20,10 @@ class YusufBox extends StatelessWidget {
             //mainAxisAlignment: MainAxisAlignment.start: kutuları tepede tutturur, MainAxisAlignment.end ise kutuları alta tutturur.
             // mainAxisAlignment: MainAxisAlignment.center ise merkezde tutturur.
             // mainAxisAlignment: MainAxisAlignment.spaceBetween = ortalarını boş bırakır eşit şekilde ekranra yayar
-            // "verticalDirection: VerticalDirection.up ve .down" // en üs ile en altın yerini dğeiştirir. ayna etkisi yaratıyor.
+// "verticalDirection: VerticalDirection.up ve .down" // en üs ile en altın yerini dğeiştirir. ayna etkisi yaratıyor.
+// crossAxisAlignment: CrossAxisAlignment.center,end, up eksen üzerinde hareket ettirmeye yarar.
 
-            verticalDirection: VerticalDirection.down,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Container(
                 width: 200,
@@ -32,6 +32,9 @@ class YusufBox extends StatelessWidget {
                 child: Text('Kutu 1'),
                 alignment: FractionalOffset.center,
               ),
+              SizedBox(
+                height: 30,
+              ),
               Container(
                 height: 150,
                 width: 200,
@@ -39,12 +42,18 @@ class YusufBox extends StatelessWidget {
                 child: Text('Kutu 2'),
                 alignment: FractionalOffset.center,
               ),
+              SizedBox(
+                height: 30,
+              ),
               Container(
                 height: 150,
                 width: 200,
                 color: Colors.yellowAccent,
                 child: Text('Kutu 3'),
                 alignment: FractionalOffset.center,
+              ),
+              Container(
+                width: double.infinity,
               ),
             ],
           ),
