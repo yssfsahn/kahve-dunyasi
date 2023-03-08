@@ -15,7 +15,7 @@ class YusufBox extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.black54,
         body: SafeArea(
-          child: Column(
+          child: Row(
             //mainAxisSize: MainAxisSize.min, <= bu en minimal şekilde ekrara sığdırır
             //mainAxisAlignment: MainAxisAlignment.start: kutuları tepede tutturur, MainAxisAlignment.end ise kutuları alta tutturur.
             // mainAxisAlignment: MainAxisAlignment.center ise merkezde tutturur.
@@ -24,36 +24,52 @@ class YusufBox extends StatelessWidget {
 // crossAxisAlignment: CrossAxisAlignment.center,end, up eksen üzerinde hareket ettirmeye yarar.
 
             crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment:
+                MainAxisAlignment.spaceBetween, //ortalığa dağıttı
             children: [
               Container(
-                width: 200,
+                // width: 200,
                 height: 150,
                 color: Colors.red,
-                child: Text('Kutu 1'),
+                child: Text('123456789'),
                 alignment: FractionalOffset.center,
               ),
               SizedBox(
                 height: 30,
+                width: 20,
               ),
               Container(
                 height: 150,
-                width: 200,
+                //width: 200,
                 color: Colors.brown,
-                child: Text('Kutu 2'),
+                child: Text('123456789'),
                 alignment: FractionalOffset.center,
               ),
               SizedBox(
                 height: 30,
+                width: 20,
               ),
               Container(
                 height: 150,
-                width: 200,
+                // width: 200,
                 color: Colors.yellowAccent,
-                child: Text('Kutu 3'),
+                child: Text('123456789'),
                 alignment: FractionalOffset.center,
               ),
-              Container(
-                width: double.infinity,
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 50,
+                    width: 50,
+                    color: Colors.green,
+                  ),
+                  Container(
+                    height: 50,
+                    width: 50,
+                    color: Colors.red,
+                  ),
+                ],
               ),
             ],
           ),
